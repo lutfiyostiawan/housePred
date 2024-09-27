@@ -15,8 +15,8 @@ population = st.sidebar.slider('Population in the vicinity (millions)', 50.00, 2
 households = st.sidebar.slider('Number of households', 0, 7000, 500)
 total_rooms = st.sidebar.slider('Total room area', 0, 50000, 2000)
 total_bedrooms = st.sidebar.slider('Total bedroom area', 0, 50000, 500)
-lat = st.sidebar.slider("Latitude", 32.5121, 42.0126, 37.3, step=0.1)
-long = st.sidebar.slider("Longitude", -124.6509, -114.1315, -122.37, step=0.1)
+lat = st.sidebar.number_input("Latitude", 32.5121, 42.0126, 37.3, step=0.1)
+long = st.sidebar.number_input("Longitude", -124.6509, -114.1315, -122.37, step=0.1)
 
 data = pd.DataFrame({
     'lat': [lat],
