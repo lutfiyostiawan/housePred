@@ -22,7 +22,7 @@ data = pd.DataFrame({
     'lat': [lat],
     'lon': [long]
 })
-st.map(data)
+st.map(data, color="#0044ff")
 
 if st.button('Estimate Price'):
     # Prepare input features (assuming your model expects these features in this order)
