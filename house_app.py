@@ -19,8 +19,8 @@ lat = st.sidebar.number_input("Latitude", 32.5121, 42.0126, 37.3, step=0.1)
 long = st.sidebar.number_input("Longitude", -124.6509, -114.1315, -122.37, step=0.1)
 
 data = pd.DataFrame({
-    'lat': lat,
-    'lon': long
+    'lat': [-6.200000, -6.175110, -6.229728],
+    'lon': [106.816666, 106.865036, 106.768232]
 })
 st.map(data)
 
