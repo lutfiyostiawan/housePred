@@ -17,6 +17,7 @@ total_rooms = st.sidebar.slider('Total room area', 0, 50000, 2000)
 total_bedrooms = st.sidebar.slider('Total bedroom area', 0, 50000, 500)
 lat = st.sidebar.number_input("Latitude", 32.5121, 42.0126, 37.3, step=0.1)
 long = st.sidebar.number_input("Longitude", -124.6509, -114.1315, -122.37, step=0.1)
+st.map(data=None, latitude=lat, longitude=long)
 
 if st.button('Estimate Price'):
     # Prepare input features (assuming your model expects these features in this order)
@@ -28,4 +29,4 @@ if st.button('Estimate Price'):
         predicted_price = model.predict(input_features)  # Use model.predict 
     st.success(f"Estimated House Price: ${predicted_price[0]:,.2f}")
 
-st.map(data=None, latitude=lat, longitude=long)
+
