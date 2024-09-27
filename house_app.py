@@ -26,7 +26,7 @@ if st.button('Estimate Price'):
     # Make prediction
     with st.spinner("Calculating..."):
         predicted_price = model.predict(input_features)  # Use model.predict 
-
+    st.map(data=None, *, latitude=lat, longitude=long)
     st.success(f"Estimated House Price: ${predicted_price[0]:,.2f}")
 
 
